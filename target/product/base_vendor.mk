@@ -38,14 +38,9 @@ PRODUCT_HOST_PACKAGES += \
 PRODUCT_HOST_PACKAGES += \
     icu-data_host_i18n_apex
 
-# do not include CAS HAl for Two-wheeler
-ifneq ($(TARGET_BUILD_2W),true)
-    PRODUCT_PACKAGES += \
-        android.hardware.cas@1.2-service
-endif
-
 # Base modules and settings for the vendor partition.
 PRODUCT_PACKAGES += \
+    android.hardware.cas@1.2-service \
     android.hardware.media.omx@1.0-service \
     boringssl_self_test_vendor \
     dumpsys_vendor \
